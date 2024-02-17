@@ -1,0 +1,176 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  height: 100vh;
+}
+
+/* Loading Screenm Part */
+#loading_screen {
+  position: fixed;
+  background: rgb(49, 126, 226);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  transition: display 0.3s linear;
+}
+#loading_screen.loaded {
+  display: none;
+}
+
+#loading_screen .logo_part {
+  width: 300px;
+  height: 200px;
+}
+
+#loading_screen .logo_part img {
+  width: 100%;
+  animation: load 2s infinite linear;
+}
+
+@keyframes load {
+  from {
+    transform: scale(0.5);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+#loading_screen .text_part h1 {
+  color: white;
+  font-size: 18px;
+  letter-spacing: 0.2rem;
+}
+
+/* Container Part */
+#container {
+  background: rgb(207, 204, 45);
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+#container .part_2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem 2rem;
+}
+#container .part_2 .btns_1 {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+#container .part_2 .btns_2 {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+.btn {
+  outline: none;
+  border: none;
+  background: transparent;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+.btn:hover {
+  box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.4),
+    2px 2px 15px 2px rgba(0, 0, 0, 0.4);
+}
+
+.nouns1_btn {
+  background: rgb(105, 12, 105);
+}
+.verbs_btn {
+  background: rgb(62, 152, 236);
+}
+.adjectives_btn {
+  background: rgb(79, 182, 47);
+}
+.nouns2_btn {
+  background: rgb(221, 168, 70);
+}
+.nouns3_btn {
+  background: rgb(251, 90, 144);
+}
+
+.suprises_btn {
+  background: rgb(230, 32, 32);
+  position: relative;
+}
+.suprises_btn::after {
+  content: "suprises";
+  position: absolute;
+  bottom: -1rem;
+  left: -3.5rem;
+  font-size: 1rem;
+  color: rgb(230, 32, 32);
+  transform: rotate(-30deg);
+}
+.playback_btn {
+  background: rgb(62, 152, 236);
+  position: relative;
+}
+.playback_btn::after {
+  content: "playback";
+  position: absolute;
+  bottom: -1.2rem;
+  left: -3.5rem;
+  font-size: 1rem;
+  color: rgb(62, 152, 236);
+  transform: rotate(-30deg);
+}
+/* Footer Part */
+#footer small a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 700;
+  transition: 0.2s ease-in-out;
+}
+#footer small a:hover {
+  color: rgb(49, 126, 226);
+}
+
+/* Medium to Small Screen */
+@media (max-width: 800px) {
+  #container {
+    width: 100%;
+    flex-direction: column;
+    margin-top: 8rem;
+  }
+  #container .part_1 {
+    width: 95%;
+  }
+  #container .part_1 img {
+    width: 100%;
+  }
+  #container .part_2 {
+    gap: 2rem;
+  }
+  #container .part_2 .btns_2 {
+    gap: 3rem;
+  }
+  #footer {
+    padding-bottom: 1rem;
+  }
+}

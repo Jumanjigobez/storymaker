@@ -79,7 +79,7 @@ nouns1_btn.onclick = () => {
 
 //for the verbs
 verbs_btn.onclick = () => {
-  randIndex = Math.floor(Math.random() * 7);
+  randIndex = Math.floor(Math.random() * 6);
   textToSpeak = verbs[randIndex]; //assign the verbs random text to textToSpeak
 
   joinedText[1] = textToSpeak; //Store the text to index 0 column for nouns 1
@@ -91,7 +91,7 @@ verbs_btn.onclick = () => {
 
 //for the adjectives
 adjectives_btn.onclick = () => {
-  randIndex = Math.floor(Math.random() * 7);
+  randIndex = Math.floor(Math.random() * 6);
   textToSpeak = adjectives[randIndex]; //assign the adjectives random text to textToSpeak
 
   joinedText[2] = textToSpeak; //Store the text to index 0 column for nouns 1
@@ -114,7 +114,7 @@ nouns2_btn.onclick = () => {
 
 //for the place nouns
 nouns3_btn.onclick = () => {
-  randIndex = Math.floor(Math.random() * 7);
+  randIndex = Math.floor(Math.random() * 6);
   textToSpeak = nouns_3[randIndex]; //assign the nouns_3 random text to textToSpeak
 
   joinedText[4] = textToSpeak; //Store the text to index 0 column for nouns 1

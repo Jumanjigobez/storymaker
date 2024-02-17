@@ -74,7 +74,7 @@ nouns1_btn.onclick = () => {
 
   speakNow(textToSpeak);
 
-  console.log(randIndex);
+  // console.log(randIndex);
 };
 
 //for the verbs
@@ -86,7 +86,7 @@ verbs_btn.onclick = () => {
 
   speakNow(textToSpeak);
 
-  console.log(randIndex);
+  // console.log(randIndex);
 };
 
 //for the adjectives
@@ -98,7 +98,7 @@ adjectives_btn.onclick = () => {
 
   speakNow(textToSpeak);
 
-  console.log(randIndex);
+  // console.log(randIndex);
 };
 
 //for the second nouns
@@ -109,7 +109,7 @@ nouns2_btn.onclick = () => {
   joinedText[3] = textToSpeak; //Store the text to index 0 column for nouns 1
   speakNow(textToSpeak);
 
-  console.log(randIndex);
+  // console.log(randIndex);
 };
 
 //for the place nouns
@@ -121,7 +121,7 @@ nouns3_btn.onclick = () => {
 
   speakNow(textToSpeak);
 
-  console.log(randIndex);
+  // console.log(randIndex);
 };
 
 //for the suprises which will read out random joined texts
